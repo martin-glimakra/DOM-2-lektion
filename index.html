@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>1</title>
+</head>
+<body>
+    <script>
+        let objectTorsten = {
+            namn: 'Torsten',
+            ålder: 62,
+            plats: 1
+        }
+
+        let objectSven = {
+            namn: 'Sven',
+            ålder: 72,
+            plats: 2
+        }
+
+        let objectNils = {
+            namn: 'Nils',
+            ålder: 84,
+            plats: 3
+        }
+
+        let gubbarray = [objectTorsten, objectSven, objectNils]
+
+        function javaScriptTillHTML() {
+            // document.getElementById('1-namn').innerHTML = gubbarray[0].namn
+            // document.getElementById('1-ålder').innerHTML = gubbarray[0].ålder
+            // document.getElementById('2-namn').innerHTML = gubbarray[1].namn
+            // document.getElementById('2-ålder').innerHTML = gubbarray[1].ålder
+            // document.getElementById('3-namn').innerHTML = gubbarray[2].namn
+            // document.getElementById('3-ålder').innerHTML = gubbarray[2].ålder
+
+            for (let i = 0; i < 3; i++) {
+                console.log('gubbarray[i]', gubbarray[i])
+                document.getElementById(gubbarray[i].plats + '-namn').innerHTML = gubbarray[i].namn
+                document.getElementById(gubbarray[i].plats + '-ålder').innerHTML = gubbarray[i].ålder
+
+            }
+        }
+    </script>
+    <h2>Guld</h2>
+    <div id="1-namn">Placeholder namn</div>
+    <div id="1-ålder">Placeholder ålder</div>
+    <h2>Silver</h2>
+    <div id="2-namn">Placeholder namn</div>
+    <div id="2-ålder">Placeholder ålder</div>
+    <h2>Brons</h2>
+    <div id="3-namn">Placeholder namn</div>
+    <div id="3-ålder">Placeholder ålder</div>
+<button onclick="javaScriptTillHTML()">kör funktionen javaScriptTillHTML</button>
+
+</body>
+</html>

@@ -38,7 +38,14 @@
                 document.getElementById(gubbarray[i].plats + '-namn').innerHTML = gubbarray[i].namn
                 document.getElementById(gubbarray[i].plats + '-ålder').innerHTML = gubbarray[i].ålder
                 //if statement ändrar bakgrundsfärg eller annan css om gubben är över 70 år gammal
-                //överkurs använda get element tby classname istället för ID
+                //överkurs använda get element by classname istället för ID
+                if (gubbarray[i].ålder >= 70) {
+                    console.log('if')
+                    document.getElementById(gubbarray[i].plats + '-namn').style.backgroundColor = 'red'
+                }
+                else {
+                    console.log('else')
+                }
             }
         }
     </script>

@@ -5,22 +5,39 @@
 </head>
 <body>
     <script>
+        function martin () {
+
+            let frånInput = document.getElementById("gåta-input").value;
+            console.log('frånInput', frånInput)
+
+            let rättaSvar = ['klockan', 'farfar']
+            let rättEllerFel = false
+
+            for (let i = 0; i < rättaSvar.length; i++) {
+                console.log(frånInput === rättaSvar[i])
+                if (frånInput === rättaSvar[i]){
+                    rättEllerFel = true
+                }
+                else {
+                    //ingenting händer
+                }
+            }
+
+            if (rättEllerFel) {
+                document.getElementById('ratt-fel').innerHTML = 'rätt'
+            }
+            else {
+                document.getElementById('ratt-fel').innerHTML = 'fel'
+
+            }
+        }
+
 
     </script>
 
-<!-- https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_text_value
-
-    Gör ett program där användaren svarar på frågan:
-    Vad är det som går och går:
-
-    Svaret ska skrivas i ett <input type="text"> element
-
-    Om användaren ger svaret klockan och sedan trycker på en knapp ska texten rätt visas.
-    Om inte svaret är klockan ska texten fel visas
-
-    Extra: både klockan och farfar ska ge rätt svarar
-
-    extra extra förvara farfar och klocka i en array och sök igenom med en loop -->
-
+<p id="ratt-fel">Tom</p>
+<p>vad är det som går och går</p>
+<input type="text" id="gåta-input">
+<button onclick="martin()">kör funktion</button>
 </body>
 </html>
